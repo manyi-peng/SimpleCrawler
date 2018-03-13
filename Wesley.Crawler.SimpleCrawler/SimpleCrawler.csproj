@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B4E2C232-D3A1-4C03-8CA6-65FC9A5D4B63}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SimpleCrawler</RootNamespace>
+    <AssemblyName>SimpleCrawler</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Drision.Framework.Common, Version=6.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Drision.Framework.Common.6.0.0.2\lib\Drision.Framework.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Drision.Framework.Common.EntityLibrary, Version=6.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Drision.Framework.Common.EntityLibrary.6.0.0.2\lib\Drision.Framework.Common.EntityLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Drision.Framework.DAL, Version=6.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Drision.Framework.DAL.6.0.0.1\lib\Drision.Framework.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Drision.Framework.Entity.Common">
+      <HintPath>..\dll\Drision.Framework.Entity.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Drision.Framework.Entity.HighTechZone">
+      <HintPath>..\dll\Drision.Framework.Entity.HighTechZone.dll</HintPath>
+    </Reference>
+    <Reference Include="Drision.Framework.Entity.Infomation">
+      <HintPath>..\dll\Drision.Framework.Entity.Infomation.dll</HintPath>
+    </Reference>
+    <Reference Include="Drision.Framework.Entity.WZDecisionSupport">
+      <HintPath>..\dll\Drision.Framework.Entity.WZDecisionSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="Drision.Framework.Interfaces, Version=6.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Drision.Framework.Interfaces.6.0.0.1\lib\Drision.Framework.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Drision.Framework.Ioc, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Drision.Framework.Ioc.6.0.0\lib\Drision.Framework.Ioc.dll</HintPath>
+    </Reference>
+    <Reference Include="Drision.Framework.Linq, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Drision.Framework.Linq.6.0.0\lib\Drision.Framework.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Drision.Framework.LiteQueryDef, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Drision.Framework.LiteQueryDef.6.0.0\lib\Drision.Framework.LiteQueryDef.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\dll\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySQL.NET.6.9.8\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.24160719\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Events\OnCompletedEventArgs.cs" />
+    <Compile Include="Events\OnErrorEventArgs.cs" />
+    <Compile Include="Events\OnStartEventArgs.cs" />
+    <Compile Include="ICrawler.cs" />
+    <Compile Include="InformationService.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleCrawler.cs" />
+    <Compile Include="WeatherService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonHelper\CommonBll.csproj">
+      <Project>{3d1be553-6042-430b-aefb-a7be35c6fdd3}</Project>
+      <Name>CommonBll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LinkService\LinkService.csproj">
+      <Project>{88a940c8-9dfa-4078-a92d-019d0c33a166}</Project>
+      <Name>LinkService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServerResourceMonitor\ServerResourceMonitor.csproj">
+      <Project>{e1e0875f-ca9c-41fb-bb04-18cb27493b96}</Project>
+      <Name>ServerResourceMonitor</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
